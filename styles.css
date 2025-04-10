@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.progress {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    height: 100%;
+    background: #28a745;
+    width: 0;
+    transition: width 0.3s;
+}
+
+#task-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-form input, #task-form select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 100px;
+}
+
+#task-form button {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#task-form button:hover {
+    background-color: #218838;
+}
+
+.filter {
+    margin-bottom: 15px;
+}
+
+#task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    border-left: 4px solid;
+}
+
+.task-item.low { border-left-color: #28a745; }
+.task-item.medium { border-left-color: #ffc107; }
+.task-item.high { border-left-color: #dc3545; }
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task-item span {
+    flex: 1;
+    font-size: 14px;
+}
+
+.task-item button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-item .edit-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.task-item .edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.task-item .delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.task-item .delete-btn:hover {
+    background-color: #c82333;
+}
